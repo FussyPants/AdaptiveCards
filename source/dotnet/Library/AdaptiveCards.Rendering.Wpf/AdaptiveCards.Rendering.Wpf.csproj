@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net4.5.2</TargetFramework>
+    <TargetFrameworks>net4.5.2;netstandard1.3;netstandard2.0</TargetFrameworks>
     <Authors>AdaptiveCards</Authors>
     <Summary>Adaptive Card renderer for WPF</Summary>
     <Description>This library implements classes for rendering Adaptive Cards into WPF controls</Description>
@@ -12,6 +12,7 @@
     <RepositoryUrl>https://github.com/Microsoft/AdaptiveCards</RepositoryUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Microsoft/AdaptiveCards/master/LICENSE</PackageLicenseUrl>
     <DefineConstants>WPF;$(DefineConstants);$(AdditionalConstants)</DefineConstants>
+    <GenerateAssemblyInfo Condition="$(Tfs_PackageVersionNumber) != ''">false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <ItemGroup>
